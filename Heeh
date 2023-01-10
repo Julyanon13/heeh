@@ -1,0 +1,8 @@
+local players = game.Players:GetChildren()
+local message = "Anúncio importante: Novos itens estão disponíveis na loja de itens!"
+
+for i, player in pairs(players) do
+    player.Chatted:Connect(function(msg)
+        player:Chat(message) 
+    end)
+end
